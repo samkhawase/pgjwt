@@ -1,5 +1,5 @@
-FROM postgres:11
-RUN apt-get update && apt-get install -y make git postgresql-server-dev-11 postgresql-11-pgtap
+FROM postgres:alpine
+RUN apk update && apk add make git postgresql-dev
 RUN mkdir "/pgjwt"
 WORKDIR "/pgjwt"
 COPY . .
